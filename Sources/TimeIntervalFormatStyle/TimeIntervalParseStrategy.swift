@@ -1,6 +1,6 @@
 //
 //  TimeIntervalParseStrategy.swift
-//  CaptionIt
+//  TimeIntervalFormatStyle
 //
 //  Created by Sommer Panage on 3/6/22.
 //

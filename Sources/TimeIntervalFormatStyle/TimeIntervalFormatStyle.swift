@@ -1,6 +1,6 @@
 //
 //  TimeIntervalFormatStyle.swift
-//  CaptionIt
+//  TimeIntervalFormatStyle
 //
 //  Created by Sommer Panage on 3/6/22.
 //
@@ -33,8 +33,8 @@ extension TimeInterval.TimeIntervalFormatStyle: ParseableFormatStyle {
         let hour = Int((value / TimeInterval.secondsPerHour).rounded(.towardZero))
         let minute = Int((value / TimeInterval.secondsPerMinute).truncatingRemainder(dividingBy: TimeInterval.minutesPerHour))
         let second = Int(value.truncatingRemainder(dividingBy: TimeInterval.secondsPerMinute))
-        let millisecond = Int((value * TimeInterval.millisecondsPerSecond).truncatingRemainder(dividingBy: TimeInterval.millisecondsPerSecond))
         if showMilliseconds {
+            let millisecond = Int((value * TimeInterval.millisecondsPerSecond).truncatingRemainder(dividingBy: TimeInterval.millisecondsPerSecond))
             return String(format:"%d:%02d:%02d.%03d", hour, minute, second, millisecond) // ex: 10:04:09.689
         } else {
             return String(format:"%d:%02d:%02d", hour, minute, second) // ex: 10:04:09
