@@ -27,3 +27,18 @@ Using `showsMilliseconds` the client can control if milliseconds are shown or no
 - With milliseconds:    2:03:44.232
 - Without milliseconds: 2:03:44
 
+## Usage in SwiftUI
+
+I built this to be able to easily move to/from TimeIntervals in SwiftUI TextFields. A simple example below!
+
+```Swift
+
+struct TimeIntervalTextField: View {
+    @Binding var duration: TimeInterval
+    
+    var body: some View {
+        TextField("Duration:", value: $duration, format: .timeInterval(showMilliseconds: true), prompt: nil)
+    }
+}
+
+```
