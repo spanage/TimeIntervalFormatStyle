@@ -17,7 +17,6 @@ public extension TimeInterval {
     }
 }
 
-@available(macOS 12.0, *)
 public extension FormatStyle where Self == TimeInterval.TimeIntervalFormatStyle {
     
     /// Format the given string as a time interval in the format 7:54:33.632 or similar
